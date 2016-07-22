@@ -7,7 +7,8 @@ if(ENABLE_TESTING)
   add_test (TestRuns mytest 1)
 
   add_test (Test2 mytest 2)
-  add_test (Test1arg mytest 3 5)
+  add_test (Test3arg mytest 3 5)
   set_tests_properties (Test2 PROPERTIES PASS_REGULAR_EXPRESSION "-2.185")
+  set_tests_properties (Test3arg PROPERTIES WILL_FAIL true)
 endif(ENABLE_TESTING)
 
